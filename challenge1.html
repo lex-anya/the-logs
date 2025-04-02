@@ -1,0 +1,48 @@
+<!-- Challenge 1 - The Logs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge - The Logs</title>
+    <link rel="stylesheet" href="challenge1.css">
+</head>
+<body>
+    <div class="container" id="screen1">
+        <p class="message flashback">You must get the timeline correct if you want to access our logs. The logs hold the key to find the disruptive frequency you will need.</p>
+        <button class="access-btn" id="accessLogsBtn1">Access Logs</button>
+    </div>
+
+    <div class="container" id="screen2" style="display: none;">
+        <p>
+            Recover logs for the following timestamps:
+        </p>
+        <ul class="draggable-list" id="draggableList">
+            <!-- Encoded timestamps will be inserted here by JavaScript -->
+        </ul>
+        <button class="access-btn" id="accessLogsBtn2">Access Logs</button>
+        <p class="error-message" id="errorMessage" style="display: none;">Access denied. Please provide the correct timeline.</p>
+        <div class="hint">
+            <span class="hint-icon" id="hintIcon">💡</span>
+            <span class="hint-message flashback" id="hintMessage">The anomaly was detected on BZAXGSCAZ and Astralis was established on BZBQEWDTZ.<br>But, when has time ever been denoted by letters alone?</span>
+        </div>
+    </div>
+
+    <div id="screen3" style="display: none;">
+        <div class="loader">
+            <div class="outer-circle"></div>
+            <div class="middle-circle"></div>
+            <div class="inner-circle"></div>
+        </div>
+        <audio id="processingAudio" src="recovering_logs_message.mp3"></audio>
+    </div>
+
+    <div class="container" id="screen4" style="display: none;">
+        <div class="logs" id="logs"></div>
+        <p class="note flashback" id="finalMessage" style="display: none;">To unlock the sounds, read our logs with care; the start of each will lead you there.</p>
+        <audio id="typingAudio" src="printingLogsShort.mp3"></audio>
+    </div>
+
+    <script src="challenge1.js"></script>
+</body>
+</html>

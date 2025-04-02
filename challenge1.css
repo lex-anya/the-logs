@@ -1,0 +1,223 @@
+body {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #00ff00;
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    position: relative; /* Added for positioning the hint icon */
+}
+
+.message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.access-btn {
+    padding: 10px 20px;
+    border: 2px solid #00ff00;
+    background-color: #0a0a0a;
+    color: #00ff00;
+    cursor: pointer;
+}
+
+.draggable-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.draggable {
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #00ff00;
+    background-color: #0a0a0a;
+    cursor: move;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 20px;
+}
+
+.hint {
+    position: absolute;
+    top: 20px; /* Adjusted to position at the top */
+    right: 20px; /* Adjusted to position at the right */
+}
+
+.hint-icon {
+    cursor: pointer;
+    margin-left: 10px; /* Added margin to create space */
+    margin-top: 10px; /* Added margin to create space */
+}
+
+.hint-message {
+    visibility: hidden;
+    width: 300px; /* Increased width */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px; /* Increased padding */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    margin-left: -150px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hint-icon:hover + .hint-message {
+    visibility: visible;
+    opacity: 1;
+}
+
+.logs {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-line;
+    font-size: 1.1em;
+}
+
+.logs-title {
+    font-size: 1.3em;
+}
+
+.log-text {
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 1.1em;
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 2s forwards; /* Fade-in effect over 2 seconds */
+}
+
+/* Flashback Styling */
+.flashback {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    opacity: 0.7;
+    font-style: italic;
+    border-left: 2px solid #00ff00;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Processing Screen Styling */
+#screen3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a0a0a;
+}
+
+.loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    animation: rotate 2s linear infinite;
+}
+
+.outer-circle, .middle-circle, .inner-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 8px solid transparent; /* Increased border width */
+}
+
+.outer-circle {
+    width: 150px;
+    height: 150px;
+    border-top: 8px solid #00ff00; /* Increased border width */
+    animation: spin 2s linear infinite;
+}
+
+.middle-circle {
+    width: 100px;
+    height: 100px;
+    border-right: 8px solid #00ff00; /* Increased border width */
+    animation: spin 1.5s linear infinite reverse;
+    top: 25px;
+    left: 25px;
+}
+
+.inner-circle {
+    width: 50px;
+    height: 50px;
+    border-bottom: 8px solid #00ff00; /* Increased border width */
+    animation: spin 1s linear infinite;
+    top: 50px;
+    left: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .message {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .access-btn {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+    }
+
+    .draggable {
+        padding: 8px; /* Adjust padding for draggable items */
+    }
+
+    .hint-message {
+        width: 250px; /* Adjust tooltip width for smaller screens */
+        margin-left: -125px; /* Center the tooltip */
+    }
+
+    .note {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
