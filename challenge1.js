@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Day 4831 : Log Entry 13\nTimestamp : November 28, 2020, 06:00:00 UTC\nCycle stability normal. Anomaly behavior follows projected oscillation patterns. Predictive accuracy at 99.7%.",
         "Day 4831 : Log Entry 31\nTimestamp : November 28, 2020, 15:00:00 UTC\nDrift detected. Minor phase misalignment observed. No immediate action required, but monitoring recommended.",
         "Day 4831 : Log Entry 45\nTimestamp : November 28, 2020, 22:00:00 UTC\nFailure in synchronization algorithms. Repeating intervals now unpredictable. Data corruption increasing.",
-        "Day 4832 : Log Entry 1\nTimestamp : November 29, 2020, 00:00:00 UTC\nImminent system-wide desynchronization. ASTRA emergency protocol engaged. Manual correction required."
+        "Day 4832 : Log Entry 1\nTimestamp : November 29, 2020, 00:00:00 UTC\nImminent system-wide desynchronization. ASTRA emergency protocols engaged. Manual correction required."
     ];
 
     function encodeTimestamp(timestamp) {
