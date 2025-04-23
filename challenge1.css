@@ -14,12 +14,12 @@ body {
 .container {
     text-align: center;
     border: 2px solid #00ff00;
-    padding: 30px; /* Increased padding */
+    padding: 30px;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-    position: relative; /* Added for positioning the hint icon */
+    position: relative;
 }
 
 .message {
@@ -57,29 +57,29 @@ body {
 
 .hint {
     position: absolute;
-    top: 20px; /* Adjusted to position at the top */
-    right: 20px; /* Adjusted to position at the right */
+    top: 20px;
+    right: 20px;
 }
 
 .hint-icon {
     cursor: pointer;
-    margin-left: 10px; /* Added margin to create space */
-    margin-top: 10px; /* Added margin to create space */
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .hint-message {
     visibility: hidden;
-    width: 300px; /* Increased width */
+    width: 300px;
     background-color: #555;
     color: #fff;
     text-align: center;
     border-radius: 5px;
-    padding: 10px; /* Increased padding */
+    padding: 10px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Position above the icon */
+    bottom: 125%;
     left: 50%;
-    margin-left: -150px; /* Center the tooltip */
+    margin-left: -150px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -102,14 +102,14 @@ body {
 
 .log-text {
     margin-bottom: 20px;
-    text-align: left; /* Align text to the left for better readability */
+    text-align: left
 }
 
 .note {
     margin-top: 20px;
     font-size: 1.1em;
-    opacity: 0; /* Start with opacity 0 */
-    animation: fadeIn 2s forwards; /* Fade-in effect over 2 seconds */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
 /* Flashback Styling */
@@ -143,20 +143,20 @@ body {
 .outer-circle, .middle-circle, .inner-circle {
     position: absolute;
     border-radius: 50%;
-    border: 8px solid transparent; /* Increased border width */
+    border: 8px solid transparent;
 }
 
 .outer-circle {
     width: 150px;
     height: 150px;
-    border-top: 8px solid #00ff00; /* Increased border width */
+    border-top: 8px solid #00ff00;
     animation: spin 2s linear infinite;
 }
 
 .middle-circle {
     width: 100px;
     height: 100px;
-    border-right: 8px solid #00ff00; /* Increased border width */
+    border-right: 8px solid #00ff00;
     animation: spin 1.5s linear infinite reverse;
     top: 25px;
     left: 25px;
@@ -165,7 +165,7 @@ body {
 .inner-circle {
     width: 50px;
     height: 50px;
-    border-bottom: 8px solid #00ff00; /* Increased border width */
+    border-bottom: 8px solid #00ff00;
     animation: spin 1s linear infinite;
     top: 50px;
     left: 50px;
@@ -202,23 +202,23 @@ body {
 /* Media Queries for Responsive Design */
 @media (max-width: 600px) {
     .message {
-        font-size: 1em; /* Adjust font size for smaller screens */
+        font-size: 1em;
     }
 
     .access-btn {
-        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        padding: 8px 16px;
     }
 
     .draggable {
-        padding: 8px; /* Adjust padding for draggable items */
+        padding: 8px;
     }
 
     .hint-message {
-        width: 250px; /* Adjust tooltip width for smaller screens */
-        margin-left: -125px; /* Center the tooltip */
+        width: 250px;
+        margin-left: -125px;
     }
 
     .note {
-        font-size: 1em; /* Adjust font size for smaller screens */
+        font-size: 1em;
     }
 }
