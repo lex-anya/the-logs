@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function typeWriterEffect(text, container, callback) {
         let index = 0;
-        const speed = 15; // Speed of typing in milliseconds
+        const speed = 15;
 
         function type() {
             if (index < text.length) {
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     accessLogsBtn1.addEventListener('click', () => {
         screen1.style.display = 'none';
         screen2.style.display = 'block';
-        populateDraggableList(); // Populate the list when screen2 is displayed
+        populateDraggableList();
     });
 
     accessLogsBtn2.addEventListener('click', () => {
